@@ -1,0 +1,49 @@
+:root{
+    --text_logo: #FA4396;
+    --bg_menu: #7d31c7;
+    --text_menu: white;
+    --bg: #efd7ff;
+    --letter_menu: 'Droid Serif', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #efd7ff;
+    font-family: var(--letter_menu);
+}
+
+.nav{
+    background-color: var(--bg_menu);
+    color: var(--text_menu);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+    
+}
+
+.nav-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+    font-size: 20px;
+}
+
+.nav-bar{
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.img-nav{
+    width: 30px;
+    height: 30px;
+    max-width: 100%;
+    max-height: 100%;
+}
