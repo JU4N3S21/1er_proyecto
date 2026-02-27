@@ -1,9 +1,14 @@
 :root{
-    --text_logo: #FA4396;
-    --bg_menu: #7d31c7;
-    --text_menu: white;
-    --bg: #efd7ff;
+    --text_logo: Black;
+    --bg_menu: white;
+    --text_menu: black;
+    --bg: white;
     --letter_menu: 'Droid Serif', serif;
+    --bg-button: #7f4dd6;
+    --bg-button-sec: #e27ddf;
+    --text-main: #4100a2;
+    --text-main-sec: #b92ab5;
+    --text-main-p: #560097;
 }
 
 * {
@@ -13,18 +18,27 @@
 }
 
 body{
-    background-color: #efd7ff;
+    background-color: var(--bg);
     font-family: var(--letter_menu);
 }
+
+/*Barra de navegación*/
 
 .nav{
     background-color: var(--bg_menu);
     color: var(--text_menu);
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 20px 70px;
     align-items: center;
-    
+    box-shadow: 0px 0px 8px 8px #ccc;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.acanix{
+    color: #560097;
 }
 
 .nav-right{
@@ -36,14 +50,78 @@ body{
 }
 
 .nav-bar{
+    text-decoration: none;
     list-style: none;
     display: flex;
     gap: 32px;
+    padding-right: 25px;
 }
 
-.img-nav{
-    width: 30px;
-    height: 30px;
+.nav-bar a{
+    text-decoration: none;
+    color: var(--letter_menu);
+    font-size: 22px;
+}
+
+.btn-nav{
+    height: 35px;
+    width: 110px;
+    background-color: var(--bg-button);
+    color: white;
+    border-radius: 100px;
+    font-size: 14px;
+    border: none;
+}
+
+/*main*/
+.main{
+    display: flex;
+    justify-content: center;
+    padding-top: 85px;
+}
+
+.main-bg{
+    z-index: 1;
+    position: absolute;
     max-width: 100%;
     max-height: 100%;
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+}
+
+.main-img{
+    height: 700px;
+    transform: translate(121px,10px);
+}
+
+.main-content-text h1{
+    color: var(--text-main);
+    font-size: 80px;
+    transform: translate(50px,-40px);
+}
+
+.ugc{
+    color: var(--text-main-sec);
+}
+
+.main-content-text p{
+    font-size: 30px;
+    color: var(--text-main-p);
+    transform: translate(50px,0px);
+}
+
+.btn-main{
+    font-size: 18px;
+    background-color: var(--bg-button-sec);
+    color: white;
+    border-radius: 100px;
+    height: 37px;
+    width: 200px;
+    border: none;
+    transform: translate(50px,50px);
 }
